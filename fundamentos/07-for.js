@@ -1,12 +1,9 @@
 //for
 
-// for (let i = 0; i < 10; i++) {
-
-//     //acciones
-//     console.log(i);
-
-// }
-
+for (let i = 0; i < 10; i++) {
+  //acciones
+  console.log(i);
+}
 
 //tarea
 //ingresar la tabla que queremos calcular
@@ -25,7 +22,6 @@
 //     //     //2 x 2 = 4
 //     //     console.log(`${tabla} x ${i} = ${tabla * i}`)
 
-
 //     // }
 
 //     console.log(tabla)
@@ -35,8 +31,6 @@
 // }
 
 // let tabla = prompt('Ingrese el numero de la tabla que desea calcular');
-
-
 
 // while (tabla !== null || tabla !== "") {
 //     tabla = parseInt(tabla);
@@ -49,10 +43,9 @@
 
 let tabla = parseInt(prompt("numero"));
 while (tabla) {
-    for (let i = 1; i <= 10; i++) {
-        console.log(`${tabla} x ${i} = ${tabla * i}`);
-    }
-    tabla = parseInt(prompt("numero"));
+  for (let i = 1; i <= 10; i++) {
+    console.log(`${tabla} x ${i} = ${tabla * i}`);
+  }
+  tabla = parseInt(prompt("numero"));
 }
-console.error('Usuario cancelo o ingreso un dato inválido')
-
+console.error("Usuario cancelo o ingreso un dato inválido");

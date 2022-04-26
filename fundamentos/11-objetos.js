@@ -1,19 +1,3 @@
-let auto = {
-  color: "red",
-  marca: "Fiat",
-  modelo: "Palio",
-  annio: 2018,
-  encendido: false,
-  encenderApagar: function () {
-    this.encendido = !this.encendido;
-    if (this.encendido) {
-      console.log("El vehículo está encendido");
-    } else {
-      console.log("El vehículo está apagado");
-    }
-  },
-};
-
 let alumno = {
   nombre: "Pablo Marino",
   edad: 38,
@@ -39,13 +23,50 @@ alumno.nombre = "Pablo Daniel Marino";
 //Eliminar un valor
 delete alumno.edad;
 
-/*
-    La instrucción for-in itera sobre todas las propiedades enumerables de un objeto que está codificado por cadenas.
-    */
-
-for (let atributo in alumno) {
-  console.log(`${atributo}: ${alumno[atributo]}`);
+//for in
+for (const atributo in alumno) {
+  if (atributo !== "saludar") {
+    console.log(`${atributo}: ${alumno[atributo]}`);
+  }
 }
+
+/*
+1- Objeto Persona con las propiedades nombre, edad y género, y el método obtDetalles(), que muestra por pantalla las propiedades de la persona.
+
+*/
+
+let persona = {
+  nombre: "José Luis",
+  edad: 34,
+  genero: "masculino",
+  obtDetalles: function () {
+    for (const atributo in this) {
+      if (atributo !== "obtDetalles") {
+        console.log(`${atributo}: ${this[atributo]}`);
+      }
+    }
+  },
+};
+
+/*
+2- Crea un objeto llamado auto que tenga algunas características como el color, marca, modelo y si está encendido o apagado. Crea los métodos necesarios para permitir encender y apagar el auto.
+
+*/
+let auto = {
+  color: "red",
+  marca: "Fiat",
+  modelo: "Palio",
+  annio: 2018,
+  encendido: false,
+  encenderApagar: function () {
+    this.encendido = !this.encendido;
+    if (this.encendido) {
+      console.log("El vehículo está encendido");
+    } else {
+      console.log("El vehículo está apagado");
+    }
+  },
+};
 
 //Arreglo de objetos
 let alumnos = [

@@ -97,3 +97,57 @@ function saludarHeroe() {
 
   console.log(`Bienvenido ${heroe}`);
 }
+
+//Diferencias entre declarativas y anónimas
+console.log(calcularDescuento(200, 15));
+console.log(calcularDescuento2(200, 15));
+
+function calcularDescuento(precio, descuento) {
+  let descuentoCalculado = 100 - descuento;
+  let montoConDescuento = (precio * descuentoCalculado) / 100;
+  return `El importe a abonar es de $${montoConDescuento}`;
+}
+
+const calcularDescuento2 = function (precio, descuento) {
+  let descuentoCalculado = 100 - descuento;
+  let montoConDescuento = (precio * descuentoCalculado) / 100;
+  return `El importe a abonar es de $${montoConDescuento}`;
+};
+//Otra diferencia es que a las funciones declarativas puedo asignarle un valor, pero a las anónimas no
+
+/*
+Tareas
+-------
+
+1- Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. A partir de la cadena que se le pasa, la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
+
+
+2- Solicitar por pantalla al usuario ingresar el valor de los lados de un rectángulo, luego crear una función para calcular su perímetro y mostrarlo por pantalla.
+
+La fórmula del perímetro  es p = 2*(a +b)
+
+*/
+
+//tarea 1
+const examinarCadena = function (cadena) {
+  if (cadena === cadena.toUpperCase()) {
+    return "El texto está en mayúsculas";
+  }
+
+  if (cadena === cadena.toLowerCase()) {
+    return "El texto está en minúsculas";
+  }
+
+  return "El texto tiene mayúsculas y minúsculas";
+};
+
+//Tarea 2
+
+const perimetroRectangulo = function (a, b) {
+  return `El perímetro del rectángulo es ${2 * (a + b)}`;
+};
+
+let ladoA = prompt("Ingrese el valor del lado A del rectángulo");
+let ladoB = prompt("Ingrese el valor del lado B del rectángulo");
+
+console.log(perimetroRectangulo(ladoA, ladoB));
